@@ -1,0 +1,6 @@
+{
+    "fabricante": "Dodge",
+    "ano": {
+        "$gt":2011    
+    }
+}
