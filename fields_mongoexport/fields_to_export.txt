@@ -1,0 +1,3 @@
+fabricante
+ano
+motorizacao.hp
