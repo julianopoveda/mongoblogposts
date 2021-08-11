@@ -9,7 +9,7 @@ Precisa saber como construir o ambiente de testes para os exemplos? No [readme b
 Retorna todos os carros que são da fabricante Dodge e com ano superior a 2011
 
 ```sh
-mongoexport mongodb://localhost:27017 --db=example -c=carros --query='{ "modelo":"Dodge", "ano":{ "$gt": 2011 } }'
+mongoexport mongodb://localhost:27017 --db=example -c=cars --query='{ "fabricante":"Dodge", "ano":{ "$gt": 2011 } }'
 ```
 
 ## Executando o comando de export com --queryFile
