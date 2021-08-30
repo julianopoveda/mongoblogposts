@@ -24,8 +24,19 @@ docker-compose up -d
 
 ## Importando os dados
 Para importar os dado baixe o [mongotools](https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools) e rodar o comando:
+
+Importando os veículos
 ```shell
-mongoimport.exe --uri=mongodb://localhost:27017 --collection=cars --db=example --jsonArray db_data/carro_dump.json
+mongoimport --uri=mongodb://localhost:27017 --collection=cars --db=example --jsonArray db_data/carro_dump.json
+```
+Importanto as duas collections de vendas
+```shell
+mongoimport --uri=mongodb://localhost:27017 -c vendas_concessionaria --db examples --jsonArray db_data/vendas_concessionaria.json
+```
+```shell
+mongoimport --uri=mongodb://localhost:27017 -c vendas_montadora --db examples --jsonArray db_data/vendas_montadora.json
 ```
 
 Alternativamente é possível utilizar alguma ferramenta visual, como o [Compass](https://www.mongodb.com/try/download/compass)
+
+
