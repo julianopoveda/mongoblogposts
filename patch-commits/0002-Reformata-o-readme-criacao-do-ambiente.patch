@@ -1,0 +1,45 @@
+From df79d0f5e5e53a05db9943a1b5dc9556ecd82713 Mon Sep 17 00:00:00 2001
+From: Juliano Poveda <julianopoveda@github.com>
+Date: Mon, 13 Sep 2021 08:39:49 -0300
+Subject: [PATCH 2/2] =?UTF-8?q?Reformata=C3=A7=C3=A3o=20readme=20criacao?=
+ =?UTF-8?q?=20do=20ambiente?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ Readme.md | 13 ++++++-------
+ 1 file changed, 6 insertions(+), 7 deletions(-)
+
+diff --git a/Readme.md b/Readme.md
+index adb4659..0be2c51 100644
+--- a/Readme.md
++++ b/Readme.md
+@@ -26,17 +26,16 @@ docker-compose up -d
+ Para importar os dado baixe o [mongotools](https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools) e rodar o comando:
+ 
+ Importando os veículos
+-```shell
++```sh
+ mongoimport --uri=mongodb://localhost:27017 --collection=cars --db=example --jsonArray db_data/carro_dump.json
+ ```
+-Importanto as duas collections de vendas
+-```shell
++Importando o arquivo de vendas concessionaria
++```sh
+ mongoimport --uri=mongodb://localhost:27017 -c vendas_concessionaria --db examples --jsonArray db_data/vendas_concessionaria.json
+ ```
+-```shell
++Importando o arquivo de vendas montadora
++```sh
+ mongoimport --uri=mongodb://localhost:27017 -c vendas_montadora --db examples --jsonArray db_data/vendas_montadora.json
+ ```
+ 
+-Alternativamente é possível utilizar alguma ferramenta visual, como o [Compass](https://www.mongodb.com/try/download/compass)
+-
+-
++Alternativamente é possível utilizar alguma ferramenta visual, como o [Compass](https://www.mongodb.com/try/download/compass)
+\ No newline at end of file
+-- 
+2.25.1
+
