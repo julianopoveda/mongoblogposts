@@ -1,7 +1,7 @@
 # Git patch
-Arquivos de exemplo do post [Git patch: Compartilhamento de commits além do remote](https://dev.to/poveda/git-patch-compartilhamento-de-commits-alem-do-remote-3j88).
+Arquivos de exemplo do post [Git patch: Compartilhamento de commits além do remote](https://dev.to/poveda/git-patch-compartilhamento-de-commits-alem-do-remote-3j88) e da sua continuação [Git apply: colocando os patch files em stage](https://dev.to/poveda/git-apply-colocando-os-patch-files-em-stage-db6).
 
-Se quiser entender o que cada comando abaixo faz, acessa o post ;)
+Se quiser entender o que cada comando abaixo faz, acessa os posts ;)
 
 ## Criando o arquivo de patch
 Vou mostrar duas formas de gerar o arquivo patch. Uma delas é utilizando a branch *carro_update* e a outra é utilizando a própria branch main.
@@ -81,3 +81,20 @@ Se quiser rodar de forma interativa basta adicionar a opção **-i**
 ```shell
 git am -i patch-commits-files/000*.patch
 ```
+
+---
+## Utilizando o git apply
+Esta parte entra no lugar do git am. No entanto, a parte de geração das branches para a aplicação dos arquivos continuam iguais
+Outro ponto que continua igual é a [geração dos arquivos .patch](#criando-o-arquivo-de-patch).
+
+Para adicionar as alterações dos arquivos de patch, rodar o comando:
+```shell
+git apply patch-commits-files/000*.patch
+```
+
+Se quiser somente verificar se as alterações dos patches podem ser adicionadas, rode o seginte comando:
+
+```shell
+git apply --check patch-commits-files/000*.patch
+```
+Para ver o erro do check, basta rodar os dois comandos acima na sequência
